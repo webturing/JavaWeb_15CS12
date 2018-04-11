@@ -1,0 +1,19 @@
+$ cd "C:\Program Files\Apache Software Foundation\Tomcat 7.0\webapps"
+$ git clone https://github.com/webturing/akFinder
+$ cd akFinder
+$ git config --global user.email "zj@webturing.com"
+$ git config --global user.name "zj"
+$ git add .
+$ git commit -m "create index.jsp"
+$ git push origin master
+Username for 'https://github.com': webturing
+
+Counting objects: 3, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 426 bytes | 426.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/webturing/akFinder
+   f702e4e..54f6eb0  master -> master
+
+
