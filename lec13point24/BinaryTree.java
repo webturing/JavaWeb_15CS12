@@ -1,3 +1,4 @@
+package point24;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Stack;
@@ -39,7 +40,6 @@ public class BinaryTree {
 	}
 
 	public void midVisit() {
-
 		if (left != null) {
 			System.out.print("(");
 			left.midVisit();
@@ -49,16 +49,28 @@ public class BinaryTree {
 			right.midVisit();
 			System.out.print(")");
 		}
-
 	}
-
+	public void midVisit(StringBuffer buffer) {
+		if (left != null) {
+			buffer.append("(");
+			left.midVisit(buffer);
+		}
+		buffer.append(root);
+		if (right != null) {		
+			right.midVisit(buffer);
+			buffer.append(")");
+		}
+	}
 	/**
 	 * @param args
 	 */
 	public static void main(String[] args) {
 		BinaryTree bt = BinaryTree.buildBTree(Arrays.asList("8 7 1 + 5 - *"
 				.split("\\s+")));
-		bt.midVisit();
+		//bt.midVisit();
+		StringBuffer buffer=new StringBuffer("");
+		bt.midVisit(buffer);
+		System.out.println(buffer);
 	}
 
 }
