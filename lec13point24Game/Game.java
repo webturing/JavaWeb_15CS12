@@ -1,4 +1,4 @@
-package point24;
+package lec13point24Game;
 import java.util.Collections;
 import java.util.List;
 import java.util.Random;

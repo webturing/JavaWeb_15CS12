@@ -1,3 +1,5 @@
+package lec14SearchDfs;
+
 public class Dfs1Demo3 {
 	static int N = 9;
 	static int[] a = new int[N];
