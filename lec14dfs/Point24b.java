@@ -1,7 +1,7 @@
 import java.util.LinkedList;
 
 public class Point24b {
-    static double[] b = new double[]{1, 7, 8, 5};
+    static Integer[] b = new Integer[]{1, 7, 8, 5};
     static boolean[] v = new boolean[b.length];
     static boolean find = false;
 
@@ -9,7 +9,11 @@ public class Point24b {
         if (find)
             return;
         if (k == b.length && feqaul(ans, 24.0)) {
-            System.out.println(exp + "=" + ans);
+            exp.pollFirst();
+            exp.pollLast();
+            for (String e : exp)
+                System.out.print(e);
+            System.out.println();
             find = true;
             return;
         }
@@ -17,7 +21,7 @@ public class Point24b {
             if (!v[i]) {
                 v[i] = true;
                 if (exp.isEmpty()) {
-                    exp.add(Double.toString(b[i]));
+                    exp.add(Integer.toString(b[i]));
                     dfs(k + 1, exp, b[i]);
                     exp.pollLast();
                 } else for (char op : "+-*/".toCharArray()) {
@@ -85,7 +89,6 @@ public class Point24b {
                             exp.pollLast();
                         }
                     }
-
                 }
                 v[i] = false;
             }
@@ -96,6 +99,6 @@ public class Point24b {
     }
 
     public static boolean feqaul(double a, double b) {
-        return Math.abs(a - b) < 1e-1;
+        return Math.abs(a - b) < 1e-6;
     }
 }
