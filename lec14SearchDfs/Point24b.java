@@ -1,3 +1,5 @@
+package lec14SearchDfs;
+
 import java.util.LinkedList;
 
 public class Point24b {
